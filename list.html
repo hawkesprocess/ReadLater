@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read Later - Saved Items</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Read Later</h1>
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search titles, content, tags, or URLs...">
+        <div class="search-info">Searches in titles, content, tags, and URLs</div>
+      </div>
+    </header>
+    
+    <div class="main-content">
+      <div class="sidebar">
+        <div class="sidebar-section">
+          <h2>Tags</h2>
+          <div id="tagsList" class="tags-list">
+            <!-- Tags will be populated here -->
+          </div>
+          <div class="add-tag">
+            <input type="text" id="newTagInput" placeholder="Add new tag">
+            <button id="addTagButton">Add</button>
+          </div>
+        </div>
+        
+        <div class="sidebar-section">
+          <h2>Filters</h2>
+          <div class="filter-option">
+            <input type="checkbox" id="showUnreadOnly">
+            <label for="showUnreadOnly">Show unread only</label>
+          </div>
+          <div class="filter-option">
+            <select id="sortOrder">
+              <option value="newest">Newest first</option>
+              <option value="oldest">Oldest first</option>
+              <option value="title">Title</option>
+            </select>
+          </div>
+        </div>
+        
+        <div class="sidebar-section">
+          <h2>Help</h2>
+          <ul class="help-links">
+            <li><a href="keyboard_shortcuts.html">Keyboard shortcuts</a></li>
+            <li><a href="settings.html">AI Content Settings</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="content-area">
+        <div class="content-header">
+          <h2>Your Saved Items</h2>
+          <button id="refreshButton" class="btn">🔄 Refresh</button>
+        </div>
+        
+        <div id="itemsList" class="items-grid">
+          <!-- Items will be populated here -->
+          <div class="empty-message">No items saved yet</div>
+        </div>
+      </div>
+    </div>
+    
+    <div id="readerView" class="reader-view">
+      <div class="reader-header">
+        <button id="closeReaderButton">← Back to List</button>
+        <h2 id="readerTitle">Article Title</h2>
+      </div>
+      <div id="readerContent" class="reader-content">
+        <!-- Article content will be displayed here -->
+      </div>
+    </div>
+  </div>
+  
+  <script src="list.js"></script>
+</body>
+</html> 

@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "Read Later",
+  "version": "1.0",
+  "description": "Save articles, videos, and other content for later viewing",
+  "permissions": [
+    "storage",
+    "tabs",
+    "activeTab",
+    "contextMenus",
+    "scripting",
+    "notifications"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "commands": {
+    "_execute_action": {
+      "suggested_key": {
+        "default": "Alt+R",
+        "mac": "Alt+R",
+        "windows": "Alt+R",
+        "chromeos": "Alt+R",
+        "linux": "Alt+R"
+      },
+      "description": "Save current page with tags"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ]
+} 

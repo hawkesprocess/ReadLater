@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Read Later</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .popup-container {
+      min-width: 400px;
+      min-height: 500px;
+      width: auto;
+      height: auto;
+    }
+  </style>
+</head>
+<body>
+  <div class="popup-container">
+    <div class="header">
+      <h1>Read Later</h1>
+    </div>
+    
+    <div class="action-buttons">
+      <button id="saveButton" class="btn primary">Save Current Page</button>
+      <button id="viewListButton" class="btn">View Saved Items</button>
+    </div>
+    
+    <div class="status-message" id="statusMessage"></div>
+    
+    <div class="recent-items" id="recentItems">
+      <h2>Recent Items</h2>
+      <div class="items-list" id="itemsList">
+        <!-- Recent items will be populated here -->
+        <div class="empty-message">No items saved yet</div>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <p>Press Alt+R to quickly save pages with tags</p>
+    </div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html> 
